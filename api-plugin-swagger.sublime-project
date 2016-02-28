@@ -2,6 +2,16 @@
 	"folders":
 	[
 		{
+			"file_exclude_patterns":
+			[
+				"*.log",
+				"*.sublime-project"
+			],
+			"folder_exclude_patterns":
+			[
+				"node_modules",
+				"lib"
+			],
 			"path": "."
 		}
 	]
