@@ -1,16 +1,38 @@
 {
-  "name": "hapi-rx-swagger",
-  "version": "0.0.1",
-  "description": "A swagger plugin for hapi using observables",
-  "main": "lib/index.js",
+  "analyze"     : true,
+  "name"        : "hapi-rx-swagger",
+  "version"     : "0.0.1",
+  "description" : "A swagger plugin for hapi using observables",
+  "author"      : "Héctor Menéndez <etor@gik.mx>",
+  "main"        : "lib/index.js",
+  "license"     : "ISC",
+
+  "keywords": [
+    "observable",
+    "hapi",
+    "documentation",
+    "swagger",
+    "rx",
+    "reactive extensions",
+    "api",
+    "plugin"
+  ],
+
+  "repository":{
+    "type":"git",
+    "url":"https://github.com/gikmx/hapi-rx-swagger"
+  },
+
+  "bugs":{
+    "url":"https://github.com/gikmx/hapi-rx-swagger/issues"
+  },
+
   "scripts": {
     "prepublish": "npm run build",
     "build": "./node_modules/.bin/babel src --out-dir lib --presets es2015,stage-0",
     "start": "./node_modules/.bin/nodemon -w src --exec 'npm run build && node lib/index.js'"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+
   "devDependencies": {
     "babel-cli": "^6.5.1",
     "babel-core": "^6.5.2",
@@ -18,6 +40,7 @@
     "babel-preset-stage-0": "^6.5.0",
     "nodemon": "^1.9.1"
   },
+
   "dependencies": {
     "hapi": "^13.0.0",
     "hapi-swagger": "^4.2.1",
