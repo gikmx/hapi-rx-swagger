@@ -16,12 +16,12 @@ const Setup = {
 	conn : {}, // These will be used on hapi connection setup
 	opts : {   // These are the plugin's options
 		sortTags : 'name',
-		tags     : {},
+		tags     : [],
 		info     : {
-			title   : `${Package.name}'s API Docs`,
+			title   : `${Package.name}'s docs.`,
 			version : Package.version,
 			contact : {
-				name : Package.author || ''
+				name : Package.author || 'Unknown.'
 			}
 		},
 
@@ -32,7 +32,6 @@ export default (setup={}) => {
 
 	setup = LoDash.merge(Setup, setup);
 	setup.register = server => Rx.Observable.create(subscriber => {
-
 		server.register([Inert, Vision, {
 			register : HapiSwagger,
 			options  : setup.opts
