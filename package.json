@@ -1,9 +1,10 @@
 {
-  "name": "api-plugin-swagger",
+  "name": "hapi-rx-swagger",
   "version": "0.0.1",
   "description": "A swagger plugin for hapi using observables",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "prepublish": "npm run build",
     "build": "./node_modules/.bin/babel src --out-dir lib --presets es2015,stage-0",
     "start": "./node_modules/.bin/nodemon -w src --exec 'npm run build && node lib/index.js'"
   },
